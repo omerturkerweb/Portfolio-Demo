@@ -1,3 +1,22 @@
+
+# My Personel Portfolio Web Site
+
+- I made my own portfolio web site demo. When I'm done with it all, it will be published on a domain name. 
+
+![ScreenShot](https://img001.prntscr.com/file/img001/ll-cpBJeQwKe1M8mRF21qA.png)
+
+
+
+    
+## Used Technologies
+
+- React (Icons , Typing Effect , Context )
+- Tailwind CSS
+
+ # Demo(Live)
+ - https://63b7f25055b7ef22f3491923--omerdevportfolio.netlify.app/
+
+  
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
