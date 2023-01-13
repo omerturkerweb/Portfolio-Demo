@@ -1,4 +1,11 @@
 export default function About() {
+  const goContact = () => {
+    window.scroll({
+      top: 2600,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   const mySkills = [
     "HTML5",
     "CSS3",
@@ -60,7 +67,7 @@ export default function About() {
             </p>
 
             <div className="contact-button">
-              <a className="primary-button" href="">
+              <a onClick={goContact} className="primary-button">
                 CONTACT ME
               </a>
             </div>

@@ -3,6 +3,34 @@ import TypingEffect from "./TypingEffect";
 import { MdDarkMode } from "react-icons/md";
 import { BsLightbulb } from "react-icons/bs";
 export default function Header() {
+  const goHome = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const goAbout = () => {
+    window.scroll({
+      top: 670,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const goProjects = () => {
+    window.scroll({
+      top: 1420,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const goContact = () => {
+    window.scroll({
+      top: 2600,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div className="header fixed !min-w-full container shadow-prmiary-light-content-shadow flex justify-between items-center p-3 px-10">
@@ -21,26 +49,26 @@ export default function Header() {
 
         <div className="header-right mr-10  flex items-center">
           <a
-            className=" hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold    header-right-menu-item "
-            href="#"
+            onClick={goHome}
+            className=" cursor-pointer hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold    header-right-menu-item "
           >
             HOME
           </a>
           <a
-            className="hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold     header-right-menu-item "
-            href="#about"
+            onClick={goAbout}
+            className="cursor-pointer hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold     header-right-menu-item "
           >
             ABOUT
           </a>
           <a
-            className="hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold    header-right-menu-item "
-            href="#"
+            onClick={goProjects}
+            className="cursor-pointer hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold    header-right-menu-item "
           >
             PROJECTS
           </a>
           <a
-            className="hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold  header-right-menu-item "
-            href="#"
+            onClick={goContact}
+            className="cursor-pointer hover:bg-social-hover rounded-md p-4 text-base text-primary-text tracking-wider font-primary-font font-semibold  header-right-menu-item "
           >
             CONTACT ME
           </a>

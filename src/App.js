@@ -55,7 +55,6 @@ function App() {
       item.classList.add("header-right-menu-item-sticky");
     });
 
-    /* addings */
     header.classList.add("header-sticky");
   };
   const headerStickyOff = () => {
@@ -67,7 +66,7 @@ function App() {
       ".header-right-menu-item"
     );
     const header = document.querySelector(".header");
-    /* removes */
+
     headerLeftImg.classList.remove("header-left-img-sticky");
     headerLeftName.classList.remove("header-left-name-sticky");
     headerMid.classList.remove("header-mid-sticky");

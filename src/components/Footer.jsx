@@ -28,15 +28,26 @@ export default function Footer() {
           ></div>
         </div>
         <div className="footer-bottom flex flex-row gap-3 cursor-pointer">
-          <AiFillGithub size={30} color="white" />
+          <a href="https://github.com/omerturkerweb" target="_blank">
+            <AiFillGithub size={30} color="white" />
+          </a>
+          <a target="_blank" href="https://twitter.com/omerturkerweb">
+            <AiFillTwitterCircle size={30} color="white" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/%C3%B6mer-t%C3%BCrker-44a28124b/"
+          >
+            <AiFillLinkedin size={30} color="white" />
+          </a>
 
-          <AiFillTwitterCircle size={30} color="white" />
+          <a target="_blank" href="https://www.instagram.com/omerturker.dev/">
+            <AiFillInstagram size={30} color="white" />
+          </a>
 
-          <AiFillLinkedin size={30} color="white" />
-
-          <AiFillInstagram size={30} color="white" />
-
-          <AiFillMail size={30} color="white" />
+          <a target="_blank" href="mailto:omerturkerweb@gmail.com">
+            <AiFillMail size={30} color="white" />
+          </a>
         </div>
         <div className="">
           <span className="text-white font-primary-font pt-3 text-sm block">

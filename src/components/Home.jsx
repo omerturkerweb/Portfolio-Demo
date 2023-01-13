@@ -1,8 +1,15 @@
 import { BsChevronDoubleDown } from "react-icons/bs";
 export default function Home() {
+  const goProjects = () => {
+    window.scroll({
+      top: 1420,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
-      <div className="about flex flex-col gap-16 justify-center items-center py-20 bg-section-grey-to-white">
+      <div className="home flex flex-col gap-16 justify-center items-center py-20 bg-section-grey-to-white">
         <h1 className="title-1 font-semibold text-6xl font-primary-font text-primary-text tracking-wide">
           WELCOME
         </h1>
@@ -10,7 +17,7 @@ export default function Home() {
           IT'S OMER TURKER'S PORTFOLIO WEBSITE
         </p>
         <button className="">
-          <a className="primary-button" href="#">
+          <a onClick={goProjects} className="primary-button" href="#">
             Projects
           </a>
         </button>

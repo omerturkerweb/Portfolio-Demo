@@ -51,7 +51,12 @@ export default function Projects() {
           })}
         </div>
         <div className="projects-bottom">
-          <button className="primary-button">Show More Project</button>
+          <a
+            href="https://github.com/omerturkerweb?tab=repositories"
+            target="_blank"
+          >
+            <button className="primary-button">Show More Project</button>
+          </a>
         </div>
       </div>
     </>
