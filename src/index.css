@@ -12,6 +12,13 @@
   list-style-type: none;
   text-decoration: none;
 }
+:root {
+  --dark-bg-1: #333333;
+  --dark-bg-2: #222222;
+  --dark-bg-hover-item: rgba(255, 255, 255, 0.115);
+  --dark-section-bg: linear-gradient(to bottom, #333333, #333333e3);
+  --dark-section-box-shadow: 0 0 25px rgba(255, 255, 255, 0.133);
+}
 html,
 body,
 #root,
@@ -162,4 +169,90 @@ body {
   background-color: #f8f8f8;
   font-size: 16px;
   resize: none;
+}
+/* DARK MODE */
+
+.header.dark-mode {
+  background-color: var(--dark-bg-2);
+  box-shadow: var(--dark-section-box-shadow);
+}
+.header.dark-mode .header-left:hover {
+  background-color: var(--dark-bg-hover-item);
+}
+.header.dark-mode .header-left .owner-brand-text {
+  color: white;
+}
+.header.dark-mode .typing-section {
+  background-color: rgba(255, 255, 255, 0.855);
+}
+.header.dark-mode .typing-section:hover {
+  background-color: white;
+}
+.header.dark-mode .header-right .menu-item {
+  color: white;
+}
+.header.dark-mode .header-right .menu-item:hover {
+  background-color: var(--dark-bg-hover-item);
+}
+
+.social.dark-mode {
+  background-color: var(--dark-bg-2);
+  box-shadow: var(--dark-section-box-shadow);
+}
+.social.dark-mode .social-item {
+  color: white;
+}
+.social.dark-mode .social-item:hover {
+  background-color: var(--dark-bg-hover-item);
+}
+.home.dark-mode {
+  background: var(--dark-section-bg);
+}
+
+.title-1.dark-mode,
+.title-2.dark-mode,
+.title-3.dark-mode,
+.page-info.dark-mode,
+.down-arrow.dark-mode {
+  color: white;
+}
+
+.about.dark-mode {
+  background: var(--dark-section-bg);
+}
+.about.dark-mode .about-bottom > div .section-title-secondary,
+.about.dark-mode .about-bottom > div .section-text,
+.about.dark-mode .about-bottom > div .section-text .special {
+  color: white;
+}
+.about.dark-mode .about-bottom .about-bottom-right .skills .skill:hover {
+  color: white;
+  background-color: var(--dark-bg-hover-item);
+}
+.about-top.dark-mode .title,
+.about-top.dark-mode .section-text {
+  color: white;
+}
+.projects.dark-mode {
+  background: var(--dark-section-bg);
+}
+.projects.dark-mode .projects-head .section-title-primary,
+.projects.dark-mode .projects-head .section-text,
+.projects.dark-mode .projects-head .section-text .special {
+  color: white;
+}
+
+.projects.dark-mode .projects-body .project-card .project-card-bottom h3,
+.projects.dark-mode .projects-body .project-card .project-card-bottom p {
+  color: white;
+}
+.contact.dark-mode {
+  background: var(--dark-section-bg);
+}
+.contact.dark-mode .contact-top .section-title-primary,
+.contact.dark-mode .contact-top .section-text {
+  color: white;
+}
+.contact.dark-mode .contact-bottom form label span {
+  color: white;
 }

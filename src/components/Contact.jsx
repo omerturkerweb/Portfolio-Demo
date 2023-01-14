@@ -1,4 +1,13 @@
+import { useContext, useEffect } from "react";
+import siteContext from "../SiteContext";
+
 export default function () {
+  const { darkMode } = useContext(siteContext);
+  useEffect(() => {
+    const contact = document.querySelector(".contact");
+    contact.classList.toggle("dark-mode");
+    contact.classList.toggle("bg-section-grey-to-white");
+  }, [darkMode]);
   return (
     <>
       <div className="contact bg-section-grey-to-white flex flex-col py-10">

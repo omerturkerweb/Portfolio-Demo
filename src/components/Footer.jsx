@@ -6,16 +6,12 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 
-const iconValue = {
-  color: "white",
-};
-
 export default function Footer() {
   return (
     <>
       <div className="footer w-full bg-black p-10 flex flex-col items-center justify-center">
         <div className="footer-top">
-          <span className="text-white font-primary-font block">
+          <span className="footer-info text-white font-primary-font block">
             This website was developed by front-end developer /
             <a href="https://twitter.com/omerturkerweb" className="underline">
               Ömer TÜRKER
@@ -50,7 +46,7 @@ export default function Footer() {
           </a>
         </div>
         <div className="">
-          <span className="text-white font-primary-font pt-3 text-sm block">
+          <span className="rights text-white font-primary-font pt-3 text-sm block">
             @Copyright. All rights reserved.
           </span>
         </div>

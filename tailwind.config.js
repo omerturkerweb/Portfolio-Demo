@@ -14,6 +14,8 @@ module.exports = {
         "type-hover": "#f5cf454d",
         "button-background": "#facf0f",
         "skill-background": "#e7e7e7",
+        "dark-bg-1": "#333333",
+        "dark-bg-2": "#222222",
       },
       backgroundImage: {
         "section-grey-to-white":
@@ -24,6 +26,9 @@ module.exports = {
       },
       fontFamily: {
         "primary-font": " 'Source Sans Pro', sans-serif ",
+      },
+      padding: {
+        21: "6rem",
       },
     },
   },

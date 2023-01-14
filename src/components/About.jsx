@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useContext } from "react";
+import siteContext from "../SiteContext";
+
 export default function About() {
+  const { darkMode } = useContext(siteContext);
+  useEffect(() => {
+    const about = document.querySelector(".about");
+    const aboutTop = document.querySelector(".about-top");
+    aboutTop.classList.toggle("dark-mode");
+    about.classList.toggle("dark-mode");
+  }, [darkMode]);
   const goContact = () => {
     window.scroll({
       top: 2600,
@@ -23,10 +34,7 @@ export default function About() {
   ];
   return (
     <>
-      <div
-        id="about"
-        className="about px-24 py-3 flex flex-col bg-section-grey-to-white"
-      >
+      <div className="about px-24 py-3 flex flex-col bg-section-grey-to-white">
         <div className="about-top py-3 flex flex-col items-center justify-center gap-4">
           <span className="title section-title-primary ">MORE ABOUT ME</span>
           <div className="hr w-10 h-1 bg-button-background"></div>
@@ -66,7 +74,7 @@ export default function About() {
               <span className="special"> social</span> media accounts.
             </p>
 
-            <div className="contact-button">
+            <div className="contact-button cursor-pointer">
               <a onClick={goContact} className="primary-button">
                 CONTACT ME
               </a>

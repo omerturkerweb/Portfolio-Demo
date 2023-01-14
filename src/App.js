@@ -3,8 +3,9 @@ import SiteContext from "./SiteContext";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Social from "./components/Social";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   const value = {
     projects: [
       {
@@ -36,6 +37,8 @@ function App() {
         tags: ["HTML", "CSS", "SASS/SCSS", "REACT", "JAVASCRIPT", "CONTEXT"],
       },
     ],
+    darkMode,
+    setDarkMode,
   };
   const headerStickyOn = () => {
     const headerLeft = document.querySelector(".header-left");

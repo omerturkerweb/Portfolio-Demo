@@ -1,9 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import siteContext from "../SiteContext";
 
 export default function Projects() {
   const context = useContext(siteContext);
   const projects = context.projects;
+  const { darkMode } = useContext(siteContext);
+
+  useEffect(() => {
+    const projects = document.querySelector(".projects");
+    projects.classList.toggle("dark-mode");
+    projects.classList.toggle("bg-section-grey-to-white");
+  }, [darkMode]);
   return (
     <>
       <div className="projects py-5 flex flex-col items-center justify-center bg-section-grey-to-white">
