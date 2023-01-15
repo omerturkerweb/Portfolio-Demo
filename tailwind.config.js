@@ -31,7 +31,7 @@ module.exports = {
         21: "6rem",
       },
       screens: {
-        xs: "500px",
+        xs: "300px",
       },
     },
   },

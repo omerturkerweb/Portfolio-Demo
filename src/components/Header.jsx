@@ -72,7 +72,7 @@ export default function Header() {
           </span>
         </div>
         <div
-          className="  typing-section header-mid   select-none transition hover:bg-type-hover p-3 bg-profile-hover cursor-pointer  rounded-md flex items-center gap-3 
+          className="typing-section header-mid   select-none transition hover:bg-type-hover p-3 bg-profile-hover cursor-pointer  rounded-md flex items-center gap-3 
           xs:!hidden 
           md:!hidden
           xl:!block
