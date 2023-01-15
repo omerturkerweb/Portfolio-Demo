@@ -16,7 +16,7 @@
   --dark-bg-1: #333333;
   --dark-bg-2: #222222;
   --dark-bg-hover-item: rgba(255, 255, 255, 0.115);
-  --dark-section-bg: linear-gradient(to bottom, #333333, #333333e3);
+  --dark-section-bg: linear-gradient(to bottom, #333333, #333333f1);
   --dark-section-box-shadow: 0 0 25px rgba(255, 255, 255, 0.133);
 }
 html,
@@ -115,9 +115,7 @@ body {
   width: 40px;
   height: 40px;
 }
-.header-left-sticky {
-  transform: translateX(100px);
-}
+
 .header-left-name {
   transition: all 0.5s;
 }
@@ -135,7 +133,12 @@ body {
 }
 .header-right-menu-item-sticky {
   padding: 15px;
-  transform: translateX(-100px);
+}
+.projects-body .project-card {
+  transition: all 0.4s;
+}
+.projects-body .project-card:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.277);
 }
 .projects-body .project-card:nth-child(2) {
   margin-bottom: 100px;
@@ -170,10 +173,31 @@ body {
   font-size: 16px;
   resize: none;
 }
+
+.header .xs-area .xs-menu {
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.458);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.371);
+}
+.header .xs-area .xs-menu a {
+  font-family: "Source Sans Pro" !important;
+  transition: all 0.3s;
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.header .xs-area .xs-menu a:hover {
+  background-color: rgba(0, 0, 0, 0.073);
+}
 /* DARK MODE */
 
 .header.dark-mode {
   background-color: var(--dark-bg-2);
+}
+.header.header-sticky {
   box-shadow: var(--dark-section-box-shadow);
 }
 .header.dark-mode .header-left:hover {
@@ -245,6 +269,19 @@ body {
 .projects.dark-mode .projects-body .project-card .project-card-bottom h3,
 .projects.dark-mode .projects-body .project-card .project-card-bottom p {
   color: white;
+}
+
+.projects.dark-mode
+  .projects-body
+  .project-card
+  .project-card-bottom
+  .project-tags
+  span:hover {
+  background-color: var(--dark-bg-hover-item);
+  color: white;
+}
+.projects.dark-mode .projects-body .project-card:hover {
+  box-shadow: 0 0 30px rgba(247, 219, 78, 0.245);
 }
 .contact.dark-mode {
   background: var(--dark-section-bg);

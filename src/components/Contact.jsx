@@ -8,6 +8,9 @@ export default function () {
     contact.classList.toggle("dark-mode");
     contact.classList.toggle("bg-section-grey-to-white");
   }, [darkMode]);
+  const submitHandle = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="contact bg-section-grey-to-white flex flex-col py-10">
@@ -19,7 +22,7 @@ export default function () {
           </p>
         </div>
         <div className="contact-bottom  px-72">
-          <form className="flex flex-col gap-10">
+          <form onSubmit={submitHandle} className="flex flex-col gap-10">
             <label>
               <span className="input-title-text">Name</span>
               <br />

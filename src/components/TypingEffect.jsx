@@ -3,10 +3,9 @@ import ReactTypingEffect from "react-typing-effect";
 export default function TypingEffect() {
   const myArr = [
     "I still open to work. ✍️ ",
-    "I currently improving my front-end and ui/ux skills. 📝",
+    "I currently improving my front-end skills. 📝",
     "I living in istanbul and im 22 years old. 🌍",
     "You can contact me using with social icons below.💡",
-    "My skills : Html5,Css3,Bootstrap,Javascript,React,Tailwind,Sass/Scss 🎨",
   ];
   return (
     <>
@@ -19,7 +18,11 @@ export default function TypingEffect() {
         displayTextRenderer={(text, index) => {
           if (index !== 5) {
             return (
-              <span className="font-primary-font tracking-wide select-none">
+              <span
+                className="font-primary-font tracking-wide select-none
+                  xl:text-sm xl:tracking-normal
+                  2xl:text-base 2xl:tracking-wide"
+              >
                 {text}
               </span>
             );
