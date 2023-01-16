@@ -3,11 +3,20 @@ import { useContext, useEffect } from "react";
 import { BsChevronDoubleDown } from "react-icons/bs";
 export default function Home() {
   const goProjects = () => {
-    window.scroll({
-      top: 1420,
-      left: 0,
-      behavior: "smooth",
-    });
+    console.log(window.innerWidth);
+    if (window.innerWidth > 700) {
+      window.scroll({
+        top: 1420,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth < 700) {
+      window.scroll({
+        top: 2250,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
   const { darkMode } = useContext(siteContext);
   useEffect(() => {

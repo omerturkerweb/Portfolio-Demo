@@ -95,25 +95,32 @@ export default function Header() {
     <>
       <div
         className="header !min-w-full !h-24 fixed container shadow-prmiary-light-content-shadow flex justify-between whitespace-nowrap items-center p-3 px-12
-         xs:justify-start
-         md:justify-center
-         xl:justify-between
-         2xl:justify-between"
+         xs:justify-start  
+         md:justify-center  
+         xl:justify-between  
+         2xl:justify-between  
+         "
       >
         <div
           onClick={headerLeftHandle}
-          className="header-left transition  hover:bg-profile-hover cursor-pointer p-3  rounded-md flex items-center"
+          className="header-left transition  hover:bg-profile-hover cursor-pointer  rounded-md flex items-center
+          xs:-ml-6 
+          md:-ml-0
+          xl:-ml-0
+          2xl:-ml-0"
         >
           <img
-            className="w-12 h-12 rounded-full header-left-img max-w-[50px]"
+            className="w-12 h-12 rounded-full header-left-img max-w-[50px]
+            xs:max-w-[45px] xs:min-w-[30px] xs:h-11 xs:pl-0 "
             src={require("../images/selfie.jpg")}
           ></img>
           <span
             className="owner-brand-text p-5  text-lg text-primary-text tracking-wider font-primary-font font-semibold transition  header-left-name
-           xs:!block
-           md:!block
-           xl:block
-           2xl:block"
+           xs:!block  xs:text-sm
+           md:!block  md:text-lg
+           xl:block  xl:text-lg
+           2xl:block 2xl:text-lg
+           "
           >
             ÖMER TÜRKER
           </span>

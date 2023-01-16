@@ -11,11 +11,19 @@ export default function About() {
     about.classList.toggle("dark-mode");
   }, [darkMode]);
   const goContact = () => {
-    window.scroll({
-      top: 2600,
-      left: 0,
-      behavior: "smooth",
-    });
+    if (window.innerWidth > 700) {
+      window.scroll({
+        top: 2430,
+        left: 0,
+        behavior: "smooth",
+      });
+    } else if (window.innerWidth < 700) {
+      window.scroll({
+        top: 4300,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
   const mySkills = [
     "HTML5",
