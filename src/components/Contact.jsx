@@ -4,11 +4,13 @@ import siteContext from "../SiteContext";
 
 export default function () {
   const [showContact, setShowContact] = useState(false);
-  const { darkMode } = useContext(siteContext);
+  const { darkMode, switchTheme } = useContext(siteContext);
   useEffect(() => {
-    const contact = document.querySelector(".contact");
-    contact.classList.toggle("dark-mode");
-    contact.classList.toggle("bg-section-grey-to-white");
+    if (switchTheme) {
+      const contact = document.querySelector(".contact");
+      contact.classList.toggle("dark-mode");
+      contact.classList.toggle("bg-section-grey-to-white");
+    }
   }, [darkMode]);
   const submitHandle = (e) => {
     e.preventDefault();

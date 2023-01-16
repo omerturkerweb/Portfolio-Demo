@@ -19,11 +19,13 @@ export default function Home() {
       });
     }
   };
-  const { darkMode } = useContext(siteContext);
+  const { darkMode, switchTheme } = useContext(siteContext);
   useEffect(() => {
-    const home = document.querySelector(".home");
-    home.classList.toggle("dark-mode");
-    home.classList.toggle("bg-section-grey-to-white");
+    if (switchTheme) {
+      const home = document.querySelector(".home");
+      home.classList.toggle("dark-mode");
+      home.classList.toggle("bg-section-grey-to-white");
+    }
   }, [darkMode]);
 
   return (

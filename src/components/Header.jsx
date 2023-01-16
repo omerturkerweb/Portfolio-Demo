@@ -33,13 +33,17 @@ export default function Header() {
       behavior: "smooth",
     });
   };
-  const { darkMode, setDarkMode } = useContext(siteContext);
+  const { darkMode, setDarkMode, switchTheme, setSwitchTeme } =
+    useContext(siteContext);
   const darkModeHandle = () => {
+    setSwitchTeme(true);
     darkMode ? setDarkMode(false) : setDarkMode(true);
   };
   useEffect(() => {
-    const Header = document.querySelector(".header");
-    Header.classList.toggle("dark-mode");
+    if (switchTheme) {
+      const Header = document.querySelector(".header");
+      Header.classList.toggle("dark-mode");
+    }
   }, [darkMode]);
   const xsMenuHandler = () => {
     const xsMenu = document.querySelector(".xs-menu");
@@ -111,7 +115,9 @@ export default function Header() {
         >
           <img
             className="w-12 h-12 rounded-full header-left-img max-w-[50px]
-            xs:max-w-[45px] xs:min-w-[30px] xs:h-11 xs:pl-0 "
+            xs:max-w-[45px] xs:min-w-[30px] xs:h-11 xs:pl-0
+            2xl:max-w-[50px]
+            "
             src={require("../images/selfie.jpg")}
           ></img>
           <span

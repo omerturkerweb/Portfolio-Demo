@@ -7,12 +7,14 @@ export default function Projects() {
   const [showProjects, setShowProjects] = useState(false);
   const context = useContext(siteContext);
   const projects = context.projects;
-  const { darkMode } = useContext(siteContext);
+  const { darkMode, switchTheme } = useContext(siteContext);
 
   useEffect(() => {
-    const projects = document.querySelector(".projects");
-    projects.classList.toggle("dark-mode");
-    projects.classList.toggle("bg-section-grey-to-white");
+    if (switchTheme) {
+      const projects = document.querySelector(".projects");
+      projects.classList.toggle("dark-mode");
+      projects.classList.toggle("bg-section-grey-to-white");
+    }
   }, [darkMode]);
   const projectsRef = useRef(null);
   useEffect(() => {

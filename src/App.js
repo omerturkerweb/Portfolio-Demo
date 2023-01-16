@@ -6,6 +6,7 @@ import Social from "./components/Social";
 import { useEffect, useState } from "react";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [switchTheme, setSwitchTeme] = useState(false);
   const value = {
     projects: [
       {
@@ -39,6 +40,8 @@ function App() {
     ],
     darkMode,
     setDarkMode,
+    switchTheme,
+    setSwitchTeme,
   };
   const headerStickyOn = () => {
     const headerLeft = document.querySelector(".header-left");

@@ -7,10 +7,12 @@ import siteContext from "../SiteContext";
 
 export default function About() {
   const [showAbout, setShowAbout] = useState(false);
-  const { darkMode } = useContext(siteContext);
+  const { darkMode, switchTheme } = useContext(siteContext);
   useEffect(() => {
-    const about = document.querySelector(".about");
-    about.classList.toggle("dark-mode");
+    if (switchTheme) {
+      const about = document.querySelector(".about");
+      about.classList.toggle("dark-mode");
+    }
   }, [darkMode]);
   const goContact = () => {
     if (window.innerWidth > 700) {
