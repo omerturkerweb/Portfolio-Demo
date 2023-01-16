@@ -9,10 +9,12 @@ import {
 } from "react-icons/ai";
 import { useEffect } from "react";
 export default function Social() {
-  const { darkMode } = useContext(siteContext);
+  const { darkMode, switchTheme } = useContext(siteContext);
   useEffect(() => {
-    const social = document.querySelector(".social");
-    social.classList.toggle("dark-mode");
+    if (switchTheme) {
+      const social = document.querySelector(".social");
+      social.classList.toggle("dark-mode");
+    }
   }, [darkMode]);
   return (
     <>
