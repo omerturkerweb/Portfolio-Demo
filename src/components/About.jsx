@@ -1,13 +1,15 @@
+import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { useState } from "react";
+import { useRef } from "react";
 import { useContext } from "react";
 import siteContext from "../SiteContext";
 
 export default function About() {
+  const [showAbout, setShowAbout] = useState(false);
   const { darkMode } = useContext(siteContext);
   useEffect(() => {
     const about = document.querySelector(".about");
-    const aboutTop = document.querySelector(".about-top");
-    aboutTop.classList.toggle("dark-mode");
     about.classList.toggle("dark-mode");
   }, [darkMode]);
   const goContact = () => {
@@ -40,9 +42,39 @@ export default function About() {
     "REDUX",
     "ADOBE PREMIRE PRO",
   ];
+  const aboutRef = useRef(null);
+  useEffect(() => {
+    console.log(aboutRef.current);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowAbout(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(aboutRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
-      <div className="about py-3 flex px-4 flex-col items-center justify-center bg-section-grey-to-white">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+        animate={
+          showAbout
+            ? {
+                opacity: 1,
+              }
+            : {}
+        }
+        ref={aboutRef}
+        className="about py-3 flex px-4 flex-col items-center justify-center bg-section-grey-to-white"
+      >
         <div className="about-top py-3 flex flex-col items-center justify-center gap-4">
           <span
             className="title section-title-primary text-center
@@ -148,7 +180,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

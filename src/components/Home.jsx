@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import siteContext from "../SiteContext";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { BsChevronDoubleDown } from "react-icons/bs";
 export default function Home() {
   const goProjects = () => {
@@ -24,9 +25,21 @@ export default function Home() {
     home.classList.toggle("dark-mode");
     home.classList.toggle("bg-section-grey-to-white");
   }, [darkMode]);
+
   return (
     <>
-      <div className="home flex flex-col gap-16 justify-center items-center py-20 bg-section-grey-to-white">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 0.8,
+        }}
+        className="home flex flex-col gap-16 justify-center items-center py-20 bg-section-grey-to-white"
+      >
         <h1
           className="title-1 font-semibold text-6xl font-primary-font text-primary-text tracking-wide
           xs:text-4xl
@@ -69,7 +82,7 @@ export default function Home() {
         <span className="down-arrow">
           <BsChevronDoubleDown />
         </span>
-      </div>
+      </motion.div>
     </>
   );
 }

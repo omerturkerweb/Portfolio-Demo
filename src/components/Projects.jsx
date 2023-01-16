@@ -1,7 +1,10 @@
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { useContext, useEffect } from "react";
 import siteContext from "../SiteContext";
 
 export default function Projects() {
+  const [showProjects, setShowProjects] = useState(false);
   const context = useContext(siteContext);
   const projects = context.projects;
   const { darkMode } = useContext(siteContext);
@@ -11,9 +14,32 @@ export default function Projects() {
     projects.classList.toggle("dark-mode");
     projects.classList.toggle("bg-section-grey-to-white");
   }, [darkMode]);
+  const projectsRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowProjects(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(projectsRef.current);
+    return () => observer.disconnect();
+  }, []);
   return (
     <>
-      <div className="projects py-5 flex flex-col items-center justify-center bg-section-grey-to-white">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+        animate={showProjects ? { opacity: 1 } : {}}
+        ref={projectsRef}
+        className="projects py-5 flex flex-col items-center justify-center bg-section-grey-to-white"
+      >
         <div className="projects-head flex flex-col justify-center items-center">
           <div className="section-title-primary text-center ">PROJECTS</div>
           <div className="hr w-10 h-1 bg-button-background"></div>
@@ -79,7 +105,7 @@ export default function Projects() {
             <button className="primary-button">Show More Project</button>
           </a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

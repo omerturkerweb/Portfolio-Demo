@@ -101,6 +101,7 @@ body {
 }
 .header {
   transition: all 0.3s;
+  z-index: 999;
 }
 .header-sticky {
   z-index: 99999;
@@ -133,6 +134,8 @@ body {
 }
 .header-right-menu-item-sticky {
   padding: 15px;
+}
+.projects {
 }
 .projects-body .project-card {
   transition: all 0.4s;
@@ -227,6 +230,9 @@ body {
 .header.dark-mode .xs-area .xs-menu .xs-dark-toggle {
   color: black;
 }
+.social {
+  z-index: 999;
+}
 
 .social.dark-mode {
   background-color: var(--dark-bg-2);
@@ -256,7 +262,9 @@ body {
 .down-arrow.dark-mode {
   color: white;
 }
-
+.about {
+  transition: all 0.6s;
+}
 .about.dark-mode {
   background: var(--dark-section-bg);
 }
@@ -268,6 +276,12 @@ body {
 .about.dark-mode .about-bottom .about-bottom-right .skills .skill:hover {
   color: white;
   background-color: var(--dark-bg-hover-item);
+}
+.about.dark-mode .about-top .title {
+  color: white;
+}
+.about.dark-mode .about-top .section-text {
+  color: white;
 }
 .about-top.dark-mode .title,
 .about-top.dark-mode .section-text {
