@@ -2,7 +2,6 @@ import { FaBars } from "react-icons/fa";
 import TypingEffect from "./TypingEffect";
 import { useContext } from "react";
 import { MdDarkMode } from "react-icons/md";
-import { BsLightbulb } from "react-icons/bs";
 import siteContext from "../SiteContext";
 import { useEffect } from "react";
 export default function Header() {
@@ -29,7 +28,7 @@ export default function Header() {
   };
   const goContact = () => {
     window.scroll({
-      top: 2600,
+      top: 2400,
       left: 0,
       behavior: "smooth",
     });
@@ -47,16 +46,64 @@ export default function Header() {
     xsMenu.classList.toggle("!opacity-100");
     xsMenu.classList.toggle("!visible");
   };
+  const headerLeftHandle = () => {
+    window.location.reload();
+  };
+  useEffect(() => {
+    const xsMenu = document.querySelector(".xs-menu");
+    document.addEventListener("click", (e) => {
+      if (e.offsetY > 95) {
+        if (
+          [...xsMenu.classList].includes("!opacity-100") &&
+          [...xsMenu.classList].includes("!visible")
+        ) {
+          xsMenu.classList.remove("!opacity-100");
+          xsMenu.classList.remove("!visible");
+        }
+      }
+    });
+  }, []);
+  const xsGoHome = () => {
+    window.scroll({
+      behavior: "smooth",
+      top: 0,
+      left: 0,
+    });
+  };
+  const xsGoAbout = () => {
+    window.scroll({
+      top: 670,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const xsGoProjects = () => {
+    window.scroll({
+      top: 2250,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+  const xsGoContact = () => {
+    window.scroll({
+      top: 4280,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <div
         className="header !min-w-full !h-24 fixed container shadow-prmiary-light-content-shadow flex justify-between whitespace-nowrap items-center p-3 px-12
- 
-         md:justify-center md:gap-10
-         xl:justify-between  
+         xs:justify-start
+         md:justify-center
+         xl:justify-between
          2xl:justify-between"
       >
-        <div className="header-left transition  hover:bg-profile-hover cursor-pointer p-3 ml-[10%] rounded-md flex items-center">
+        <div
+          onClick={headerLeftHandle}
+          className="header-left transition  hover:bg-profile-hover cursor-pointer p-3  rounded-md flex items-center"
+        >
           <img
             className="w-12 h-12 rounded-full header-left-img max-w-[50px]"
             src={require("../images/selfie.jpg")}
@@ -89,13 +136,13 @@ export default function Header() {
             2xl:!hidden"
         >
           <FaBars size={30} />
-          <div className="xs-menu cursor-pointer  flex flex-col justify-center items-center p-5 absolute top-20 -left-9">
-            <a onClick={goHome}>Home</a>
-            <a onClick={goAbout}>About</a>
-            <a onClick={goProjects}>Projects</a>
-            <a onClick={goContact}>Contact</a>
+          <div className="xs-menu cursor-pointer flex flex-col justify-center items-center p-5 absolute top-20 -right-5">
+            <a onClick={xsGoHome}>Home</a>
+            <a onClick={xsGoAbout}>About</a>
+            <a onClick={xsGoProjects}>Projects</a>
+            <a onClick={xsGoContact}>Contact</a>
             <a onClick={darkModeHandle}>
-              <MdDarkMode size={20} />
+              <MdDarkMode className="xs-dark-toggle" size={20} />
             </a>
           </div>
         </div>

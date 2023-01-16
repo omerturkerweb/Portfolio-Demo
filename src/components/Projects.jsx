@@ -15,32 +15,46 @@ export default function Projects() {
     <>
       <div className="projects py-5 flex flex-col items-center justify-center bg-section-grey-to-white">
         <div className="projects-head flex flex-col justify-center items-center">
-          <div className="section-title-primary">PROJECTS</div>
+          <div className="section-title-primary text-center ">PROJECTS</div>
           <div className="hr w-10 h-1 bg-button-background"></div>
-          <p className="section-text py-3">
+          <p className="section-text py-3 text-center px-11">
             Below are 3 of my projects that I shared as open source code on
             <span className="special"> github</span>
           </p>
         </div>
 
-        <div className="projects-body  flex flex-row justify-center p-40 items-center gap-3">
+        <div
+          className="projects-body flex flex-row justify-center p-20 items-center gap-3
+            xs:flex-col xs:p-0
+            md:flex-row md:p-20
+            xl:flex-row xl:p-20
+            2xl:flex-row 2x:p-20
+            "
+        >
           {projects.map((project, index) => {
             return (
               <div
                 key={index}
-                className="project-card cursor-pointer border rounded-md flex flex-col justify-center gap-10 items-center border-gray-300"
+                className="project-card !mb-5  cursor-pointer border rounded-md flex flex-col justify-center gap-10 items-center border-gray-300"
               >
                 <div className="project-card-top rounded-t-md">
                   <img className="rounded-t-md" src={project.imgSrc}></img>
                 </div>
                 <div className="project-card-bottom flex flex-col gap-3 p-5 ">
-                  <h3 className="text-primary-text font-primary-font font-semibold text-xl tracking-wide">
+                  <h3 className="text-primary-text font-primary-font font-semibold text-xl tracking-wide text-center">
                     {project.title}
                   </h3>
-                  <p className="text-primary-text font-primary-font leading-7">
+                  <p className="text-primary-text font-primary-font px-4 leading-7 text-center">
                     {project.description}
                   </p>
-                  <div className="project-tags flex flex-row flex-wrap m-3 gap-3">
+                  <div
+                    className="project-tags flex flex-row  flex-wrap m-3 gap-3 
+                  xs:px-2
+                  md:px-0
+                  xl:px-0
+                  2xl:px-0
+                  "
+                  >
                     {project.tags.map((tag, index) => {
                       return (
                         <span

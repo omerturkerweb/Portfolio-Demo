@@ -34,18 +34,43 @@ export default function About() {
   ];
   return (
     <>
-      <div className="about px-24 py-3 flex flex-col bg-section-grey-to-white">
+      <div className="about py-3 flex px-4 flex-col items-center justify-center bg-section-grey-to-white">
         <div className="about-top py-3 flex flex-col items-center justify-center gap-4">
-          <span className="title section-title-primary ">MORE ABOUT ME</span>
+          <span
+            className="title section-title-primary text-center
+            xs:text-2xl
+            md:text-4xl
+            xl:text-4xl
+            2xl:text-4xl
+            "
+          >
+            MORE ABOUT ME
+          </span>
           <div className="hr w-10 h-1 bg-button-background"></div>
-          <p className="section-text ">
+          <p
+            className="section-text 
+           xs:text-sm
+           md:text-base
+           xl:text-base
+           2xl:text-base text-center
+           "
+          >
             Below you can learn more about my front-end development, Programming
             and development and see the skills I have previously experienced
           </p>
         </div>
-        <div className="about-bottom flex flex-row">
+        <div
+          className="about-bottom flex flex-row px-20
+        xs:flex-col xs:px-0
+        md:flex-row md:px-20
+        xl:flex-row xl:px-20
+        2xl:flex-row 2xl:px-20
+        "
+        >
           <div className=" border border-gray-300 rounded-sm about-bottom-left w-full p-10 flex flex-col gap-10  ">
-            <h3 className="section-title-secondary">What im a doing</h3>
+            <h3 className="section-title-secondary text-center">
+              What im a doing
+            </h3>
             <p className="section-text">
               I am a <span className="special">Frontend Web Developer</span>. I
               simply design the front parts of the websites you view, make the
@@ -80,13 +105,32 @@ export default function About() {
               </a>
             </div>
           </div>
-          <div className="about-bottom-right  w-3/5 flex flex-col p-10">
-            <h3 className="section-title-secondary ">My Skillset</h3>
-            <div className="skills  flex flex-row gap-2  w-4/6 py-20 items-center   flex-wrap">
+          <div
+            className="about-bottom-right  mx-auto w-3/5 flex flex-col flex-wrap p-10
+          xs:w-5/6
+          md:w-3/5
+          xl:w-3/5
+          2xl:w-3/5
+          "
+          >
+            <h3 className="section-title-secondary text-center">My Skillset</h3>
+            <div
+              className="skills  flex flex-row gap-2 w-4/6 items-center !flex-wrap
+            xs:py-5 xs:w-full 
+            md:py-20
+            xl:py-20
+            2xl:py-20
+            "
+            >
               {mySkills.map((skill, index) => {
                 return (
                   <span
-                    className="skill bg-skill-background font-primary-font transition hover:bg-profile-hover  text-primary-text rounded-md cursor-pointer block p-3"
+                    className="skill select-none bg-skill-background font-primary-font transition hover:bg-profile-hover whitespace-nowrap  text-primary-text rounded-md cursor-pointer block p-3
+                    xs:text-[11px]
+                    md:text-base
+                    xl:text-base
+                    2xl:text-base
+                    "
                     key={index}
                   >
                     {skill}

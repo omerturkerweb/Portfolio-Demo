@@ -15,13 +15,20 @@ export default function () {
     <>
       <div className="contact bg-section-grey-to-white flex flex-col py-10">
         <div className="contact-top flex flex-col items-center justify-center gap-5">
-          <div className="section-title-primary">CONTACT ME</div>
+          <div className="section-title-primary">CONTACT</div>
           <div className="hr w-10 h-1 bg-button-background"></div>
-          <p className="section-text ">
+          <p className="section-text text-center px-3">
             Contact me for any offers, questions, suggestions or to meet!
           </p>
         </div>
-        <div className="contact-bottom  px-72">
+        <div
+          className="contact-bottom  px-52
+          xs:px-12
+          md:px-32
+          xl:px-40
+          2xl:px-52
+          "
+        >
           <form onSubmit={submitHandle} className="flex flex-col gap-10">
             <label>
               <span className="input-title-text">Name</span>

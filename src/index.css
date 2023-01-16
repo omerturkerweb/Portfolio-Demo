@@ -175,6 +175,7 @@ body {
 }
 
 .header .xs-area .xs-menu {
+  user-select: none;
   transition: all 0.4s;
   visibility: hidden;
   opacity: 0;
@@ -182,6 +183,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.458);
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.371);
+  padding: 15px 50px;
 }
 .header .xs-area .xs-menu a {
   font-family: "Source Sans Pro" !important;
@@ -199,6 +201,7 @@ body {
 }
 .header.header-sticky {
   box-shadow: var(--dark-section-box-shadow);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.256);
 }
 .header.dark-mode .header-left:hover {
   background-color: var(--dark-bg-hover-item);
@@ -218,6 +221,12 @@ body {
 .header.dark-mode .header-right .menu-item:hover {
   background-color: var(--dark-bg-hover-item);
 }
+.header.dark-mode .xs-area svg {
+  color: white;
+}
+.header.dark-mode .xs-area .xs-menu .xs-dark-toggle {
+  color: black;
+}
 
 .social.dark-mode {
   background-color: var(--dark-bg-2);
@@ -231,6 +240,13 @@ body {
 }
 .home.dark-mode {
   background: var(--dark-section-bg);
+}
+.home.dark-mode .title-1,
+.home.dark-mode .title-2,
+.home.dark-mode .title-3,
+.home.dark-mode .page-info,
+.home.dark-mode .down-arrow {
+  color: white;
 }
 
 .title-1.dark-mode,

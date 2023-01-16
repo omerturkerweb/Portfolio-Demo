@@ -11,7 +11,7 @@ export default function Footer() {
     <>
       <div className="footer w-full bg-black p-10 flex flex-col items-center justify-center">
         <div className="footer-top">
-          <span className="footer-info text-white font-primary-font block">
+          <span className="footer-info text-white font-primary-font block text-center">
             This website was developed by front-end developer /
             <a href="https://twitter.com/omerturkerweb" className="underline">
               Ömer TÜRKER

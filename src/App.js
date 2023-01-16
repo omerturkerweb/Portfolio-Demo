@@ -24,7 +24,7 @@ function App() {
           "I made the index page of one of the most popular coins, shiba coin, using only html and css. This is one of my first works.",
         imgSrc:
           "https://camo.githubusercontent.com/d8b66f1469abb79640f1b80506037093016b5928a58da660dd7def2be995c642/68747470733a2f2f696d673030312e70726e747363722e636f6d2f66696c652f696d673030312f594746394458543352624b6a6c6c62624d72363469772e706e67",
-        tags: ["HTML", "CSS", "CLONE", "SHIBA"],
+        tags: ["HTML", "CSS", "CLONE", "SHIBA", "DESIGN", "BASICS"],
       },
       {
         id: 3,
@@ -89,6 +89,7 @@ function App() {
       }
     });
   }, []);
+
   return (
     <SiteContext.Provider value={value}>
       <div className="App">
