@@ -89,7 +89,9 @@ function App() {
       }
     });
   }, []);
-
+  useEffect(() => {
+    setDarkMode(false);
+  }, []);
   return (
     <SiteContext.Provider value={value}>
       <div className="App">
