@@ -14,7 +14,7 @@
 - Tailwind CSS
 
  # Demo(Live)
- - https://63b7f25055b7ef22f3491923--omerdevportfolio.netlify.app/
+ - https://63c5c74b359aa0000923050d--omerdevportfolio.netlify.app/
 
   
 # Getting Started with Create React App
