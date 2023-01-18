@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [switchTheme, setSwitchTeme] = useState(false);
+  const [scrollTop, setScrollTop] = useState(false);
   const value = {
     projects: [
       {
@@ -42,6 +43,8 @@ function App() {
     setDarkMode,
     switchTheme,
     setSwitchTeme,
+    scrollTop,
+    setScrollTop,
   };
   const headerStickyOn = () => {
     const headerLeft = document.querySelector(".header-left");
@@ -93,7 +96,9 @@ function App() {
     });
   }, []);
   useEffect(() => {
-    setDarkMode(false);
+    window.addEventListener("scroll", () => {
+      window.pageYOffset > 1000 ? setScrollTop(true) : setScrollTop(false);
+    });
   }, []);
   return (
     <SiteContext.Provider value={value}>

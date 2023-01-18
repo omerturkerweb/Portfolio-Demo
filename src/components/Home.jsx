@@ -1,3 +1,4 @@
+import { FiArrowUp } from "react-icons/fi";
 import { motion } from "framer-motion";
 import siteContext from "../SiteContext";
 import { useContext, useEffect, useRef } from "react";
@@ -19,7 +20,7 @@ export default function Home() {
       });
     }
   };
-  const { darkMode, switchTheme } = useContext(siteContext);
+  const { darkMode, switchTheme, scrollTop } = useContext(siteContext);
   useEffect(() => {
     if (switchTheme) {
       const home = document.querySelector(".home");
@@ -27,9 +28,43 @@ export default function Home() {
       home.classList.toggle("bg-section-grey-to-white");
     }
   }, [darkMode]);
+  const scrollToTopHandle = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+  useEffect(() => {
+    const scrollToTopContainer = document.querySelector(
+      ".scroll-top-container"
+    );
+    if (scrollTop) {
+      console.log(scrollToTopContainer);
+      scrollToTopContainer.classList.add("scroll-top-active");
+    } else {
+      scrollToTopContainer.classList.remove("scroll-top-active");
+    }
+  }, [scrollTop]);
+  useEffect(() => {
+    const scrollTopContainer = document.querySelector(".scroll-top-container");
 
+    darkMode
+      ? scrollTopContainer.classList.toggle("dark-mode")
+      : scrollTopContainer.classList.toggle("dark-mode");
+  }, [darkMode]);
   return (
     <>
+      <div
+        onClick={scrollToTopHandle}
+        className="scroll-top-container fixed bottom-10 right-10
+        xs:bottom-6 xs:right-6
+        md:bottom-10 md:right-10
+        xl:bottom-10 xl:right-10
+        2xl:bottom-10 2xl:right-10
+        "
+      >
+        <FiArrowUp className="cursor-pointer scroll-top" />
+      </div>
       <motion.div
         initial={{
           opacity: 0,

@@ -46,7 +46,6 @@ export default function About() {
   ];
   const aboutRef = useRef(null);
   useEffect(() => {
-    console.log(aboutRef.current);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {

@@ -116,7 +116,7 @@ export default function Header() {
           <img
             className="w-12 h-12 rounded-full header-left-img max-w-[50px]
             xs:max-w-[45px] xs:min-w-[30px] xs:h-11 xs:pl-0
-            2xl:max-w-[50px]
+            2xl:max-w-[45px]
             "
             src={require("../images/selfie.jpg")}
           ></img>
