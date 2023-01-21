@@ -13,8 +13,8 @@
 - React (Icons , Typing Effect , Context )
 - Tailwind CSS
 
- # Demo(Live)
- - https://63c5c74b359aa0000923050d--omerdevportfolio.netlify.app/
+ # Live
+ - https://master--omerdevportfolio.netlify.app/
 
   
 # Getting Started with Create React App
