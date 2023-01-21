@@ -3,10 +3,16 @@
 
 - I made my own portfolio web site demo. When I'm done with it all, it will be published on a domain name. 
 
-![ScreenShot](https://img001.prntscr.com/file/img001/ll-cpBJeQwKe1M8mRF21qA.png)
+![ScreenShot](https://img001.prntscr.com/file/img001/e0xzx6UJRVKkG8ODdcBqow.png)
+![ScreenShot](https://img001.prntscr.com/file/img001/oFLpE1RySJuLthr11yzFOA.png)
+![ScreenShot](https://img001.prntscr.com/file/img001/O3fNSiXPQrKAnHHK4s7sYA.png)
+![ScreenShot](https://img001.prntscr.com/file/img001/coBPrRctTECNXfBRIKNNTQ.png)
 
 
-
+## Updates
+- Now responsiveble mobile devices
+- Added dark theme
+- Bugs fixed
     
 ## Used Technologies
 
